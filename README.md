@@ -1,4 +1,4 @@
-<div align="center"> <a href="https://github.com/frezs/niudana-vue-ts"> <img alt="VbenAdmin Logo" width="200" height="200" src="https://frezs.github.io/frezs/images/logo.png"> </a> <br> <br>
+<div align="center"> <a href="https://github.com/frezs/niudana-vue-ts"> <img alt="Niudana Logo" width="100" height="100" src="./src/assets/images/logo.png"> </a> <br> <br>
 
 [![license](https://img.shields.io/github/license/frezs/niudana-vue-ts.svg)](LICENSE)
 
