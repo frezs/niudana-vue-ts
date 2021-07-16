@@ -9,7 +9,7 @@
 
 ## 简介
 
-Niudana-vue-ts 是一个 Vue3 学习练习项目，原创设计归属于[Niudana](https://niudana.com)。使用了最新的`vue3`,`vite2`,`TypeScript`等主流技术开发，开箱即用的中后台前端解决方案，也可用于学习参考。
+Niudana-vue-ts 是一个 Vue3 学习练习项目，原创设计归属于[Niudana](https://niudana.com)。使用了最新的`vue3`,`vite2`,`TypeScript`等主流技术开发。
 
 ## 特性
 
