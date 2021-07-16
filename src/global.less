@@ -1,0 +1,85 @@
+/* @import url("https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css"); */
+/* @import "@/assets/index.css"; */
+@import './assets/variable.css';
+@import './assets/normalize.css';
+
+@font-face {
+  font-family: 'ArMT';
+  src: url('./assets/font/ArialRoundedMTBold.eot');
+  src: url('./assets/font/ArialRoundedMTBold.eot?#iefix')
+      format('embedded-opentype'),
+    url('./assets/font/ArialRoundedMTBold.woff2') format('woff2'),
+    url('./assets/font/ArialRoundedMTBold.woff') format('woff'),
+    url('./assets/font/ArialRoundedMTBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('./assets/font/iconfont.woff2') format('woff2'),
+    url('./assets/font/iconfont.woff') format('woff'),
+    url('./assets/font/iconfont.ttf') format('truetype');
+}
+
+.iconfont {
+  font-family: 'iconfont' !important;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  color: var(--text-color-secondary);
+  transition: font-size 0.25s linear, width 0.25s linear;
+  -webkit-transition: font-size 0.25s linear, width 0.25s linear;
+  -moz-transition: font-size 0.25s linear, width 0.25s linear;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f5f5f5;
+  background-size: 128px;
+  min-width: 628px;
+
+  .button-go a .go,
+  .text {
+    color: #fff;
+  }
+}
+#app[theme='dark'] {
+  background-image: url(@/assets/images/bg.png);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+html,
+body {
+  font-family: 'ArMT';
+}
+
+/* ecoration */
+a {
+  text-decoration: none;
+}
+
+input,
+textarea {
+  border: none;
+  outline: none;
+}
+textarea {
+  resize: none;
+}
+
+button {
+  border: none;
+}
