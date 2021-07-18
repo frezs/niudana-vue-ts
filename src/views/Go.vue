@@ -30,4 +30,13 @@ const cards: AppFeedCardProps = computed(() => {
   return JSON.parse(card as string)
 }) as any
 
+// 全局事件写法，出发事件，传入callback
+// import { ref } from 'vue'
+// import { mitter as mitt } from '@/plugins/mitt'
+
+// const cards = ref<AppFeedCardProps>()
+// mitt.all.has('Go') ? mitt.emit('Go', (card: string) => {
+//   cards.value = JSON.parse(card)
+// }) : router.push({ name: 'Home' })
+
 </script>

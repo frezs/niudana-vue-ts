@@ -37,7 +37,18 @@ async function changeFeeds(page: number) {
 
 function cardClick(val: any) {
   // 传递参数
-  console.log(val)
   router.push({ name: 'Go', params: { card: JSON.stringify(val) } })
 }
+
+// 全局事件写法，创建一个事件
+// import { mitter } from '@/plugins/mitt'
+
+// function cardClick(val: any) {
+//   // 传递参数
+//   router.push({ name: 'Go', })
+//   mitter.on('Go', (callback: any) => {
+//     callback(JSON.stringify(val))
+//   })
+// }
+
 </script>
