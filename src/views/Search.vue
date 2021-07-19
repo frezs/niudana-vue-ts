@@ -15,20 +15,43 @@
 </template>
 
 <script setup lang="ts">
+import type { Ref } from 'vue'
 import { searchFeeds } from '@/api/index'
-import { ref, unref } from 'vue'
+import { ref, unref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import FeedCard from '@/components/FeedCard.vue'
+import { mitter as mitt } from '@/plugins/mitt'
+import { getTitle } from '@/hooks/useTitle'
 
 const feeds = ref<AppFeedCardProps[] | null>(null)
+const word = ref()
 const router = useRouter()
+const { currentRoute } = router
 
-const { word } = unref(router.currentRoute)?.query
+const pageTitle = getTitle().value
 
-void getSearchFeeds()
+word.value = currentRoute.value.query?.word
+
+watch(
+  () => currentRoute.value.query,
+  (val) => {
+    word.value = val?.word
+    // 有word参数的情况，重新触发搜索
+    Reflect.has(currentRoute.value.query, 'word') && loadSearch()
+  }
+)
+
+void loadSearch()
+
+function loadSearch() {
+  getSearchFeeds()
+  mitt.emit('PageTitle', (val: Ref) => {
+    val.value = `${pageTitle}:${word.value}`
+  })
+}
 
 async function getSearchFeeds() {
-  feeds.value = await searchFeeds(word as string)
+  feeds.value = await searchFeeds(word.value)
 }
 
 function cardClick(val: any) {

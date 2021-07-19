@@ -18,6 +18,7 @@ import PageTitle from '@/components/PageTitle.vue'
 import { getTitle } from '@/hooks/useTitle'
 import Footer from '@/layout/Footer.vue'
 import Header from '@/layout/Header.vue'
+import { mitter as mitt } from '@/plugins/mitt'
 
 import { ref } from 'vue'
 
@@ -28,6 +29,10 @@ let title = ref<string | undefined>(undefined)
 const titleURL = ref('#/log')
 
 title = getTitle()
+
+mitt.on('PageTitle', (cb: any) => {
+  cb(title)
+})
 
 getLinks().then((data) => {
   links.value = data

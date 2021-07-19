@@ -4,8 +4,8 @@ import mitt from 'mitt'
 export const mitter = mitt()
 
 export const mittPlugin = {
-  install: (app: App<Element>, alios: string = '$mitt') => {
-    return app.config.globalProperties[alios] = mitter
+  install: (app: App<Element>, alias: string = '$mitt') => {
+    return app.config.globalProperties[alias] = mitter
   }
 }
 

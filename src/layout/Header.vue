@@ -35,11 +35,13 @@ const router = useRouter()
 function handelKeyEvent(e: KeyboardEvent) {
   if (e.code.toUpperCase() === 'ENTER' && search.value) {
     router.push({ path: `/search?${search.value}`, query: { word: search.value } })
+    search.value = ''
   }
 }
 
 function handelClick() {
   search.value && router.push({ path: `/search?${search.value}`, query: { word: search.value } })
+  search.value = ''
 }
 
 </script>
