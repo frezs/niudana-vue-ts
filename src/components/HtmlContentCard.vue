@@ -18,15 +18,18 @@ defineProps({
   border-radius: var(--border-radius-md);
   background-color: var(--heading-color);
   overflow: hidden;
-  p {
+  p,
+  li {
     margin-bottom: 24px;
     color: var(--heighlight-color);
     word-wrap: break-word;
     word-break: break-all;
     overflow: hidden;
   }
-  blockquote {
+  blockquote,
+  ul {
     margin: 0;
+    padding: 5px;
   }
   strong {
     margin-right: 8px;
